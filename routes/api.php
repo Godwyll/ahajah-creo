@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\v1\ContentController;
+use App\Http\Controllers\UssdController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,5 @@ use App\Http\Controllers\Api\v1\ContentController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
 Route::get('content', [ContentController::class, 'index']);
-
+Route::post('ussd', [UssdController::class, 'callback']);

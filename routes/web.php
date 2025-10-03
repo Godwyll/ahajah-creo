@@ -4,7 +4,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FarmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UssdController;
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,6 +31,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('farms', FarmController::class);
 });
 
-Route::post('ussd', [UssdController::class, 'callback']);
 
 require __DIR__.'/auth.php';
