@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
 use App\Models\Ussd;
 use Illuminate\Http\Request;
@@ -23,12 +23,11 @@ class UssdController extends Controller
         $network = $request->input('network');
 
         if ($newSession) {
-            $message = "Welcome to Arkesel Voting Portal. Please vote for your favourite service from Arkesel" .
-                "\n1. SMS" .
-                "\n2. Voice" .
-                "\n3. Email" .
-                "\n4. USSD" .
-                "\n5. Payments";
+            $message = "Welcome to KASA" .
+                "\n1. Register Farm" .
+                "\n2. Field Conditions" .
+                "\n3. Crop Guide" .
+                "\n4. Notifications";
             $continueSession = true;
 
             // Keep track of the USSD state of the user and their session
