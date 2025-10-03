@@ -14,5 +14,5 @@ use App\Http\Controllers\UssdController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get('content', [ContentController::class, 'index']);
+
 Route::post('ussd', [UssdController::class, 'callback']);
