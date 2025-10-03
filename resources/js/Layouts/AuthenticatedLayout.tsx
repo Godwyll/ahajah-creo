@@ -28,14 +28,8 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                                 <NavLink href={route('users.index')} active={route().current('users.index')}>
                                     Users
                                 </NavLink>
-                                <NavLink href={route('widgets.index')} active={route().current('widgets.index')}>
-                                    Widgets
-                                </NavLink>
-                                <NavLink href={route('contents.index')} active={route().current('contents.index')}>
-                                    Contents
-                                </NavLink>
-                                <NavLink href={route('responses.index')} active={route().current('responses.index')}>
-                                    Responses
+                                <NavLink href={route('farms.index')} active={route().current('farms.index')}>
+                                    Farms
                                 </NavLink>
                             </div>
                         </div>
@@ -115,13 +109,8 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                         </ResponsiveNavLink>
                     </div>
                     <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('widgets.index')} active={route().current('widgets.index')}>
-                            Widgets
-                        </ResponsiveNavLink>
-                    </div>
-                    <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('contents.index')} active={route().current('contents.index')}>
-                            Contents
+                        <ResponsiveNavLink href={route('farms.index')} active={route().current('farms.index')}>
+                            Farms
                         </ResponsiveNavLink>
                     </div>
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasMany};
 use Illuminate\Database\Eloquent\Model;
 
-class Widget extends Model
+class Farm extends Model
 {
     use HasFactory;
 
@@ -15,7 +15,7 @@ class Widget extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['name', 'description', 'image', 'slug', 'is_active', 'created_by'];
+    protected $fillable = ['name', 'description', 'image','created_by'];
 
     /**
      * Model Relationships.
@@ -23,10 +23,5 @@ class Widget extends Model
     public function createdBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
-    }
-
-    public function contents(): HasMany
-    {
-        return $this->hasMany(Content::class);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class WidgetRequest extends BaseFormRequest
+class FarmRequest extends BaseFormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -15,8 +15,6 @@ class WidgetRequest extends BaseFormRequest
             'name' => 'required|string',
             'description' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
-            'slug' => 'required|string|unique:widgets,slug',
-            'is_active' => 'bool',
         ];
     }
 
@@ -26,15 +24,13 @@ class WidgetRequest extends BaseFormRequest
             'name' => 'required|string',
             'description' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
-            'slug' => 'required|string|unique:widgets,slug,' . $this->route('widget')->id,
-            'is_active' => 'bool',
         ];
     }
 
     public function delete(): array
     {
         return [
-            'id' => 'required|integer|exists:widgets,id'
+            'id' => 'required|integer|exists:farms,id'
         ];
     }
 }
